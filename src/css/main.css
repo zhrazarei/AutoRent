@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@font-face {
+  font-family: Estedad;
+  src: url(../fonts/Estedad-Regular.ttf);
+}
+@theme {
+  --font-Es: Estedad;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px); 
+  filter: blur(6px);           
+    transition: all 1.2s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  
+}
