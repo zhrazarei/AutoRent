@@ -6,7 +6,7 @@
     <title>call</title>
     <link
       rel="shortcut icon"
-      href="./src/images/favicon.ico"
+      href="./images/favicon.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./css/output.css" />
@@ -221,43 +221,43 @@
         >
           <div>
             <div class="mb-10">
-              <p class="font-Es text-[#494949] text-[24px] mb-4">
+              <p class="font-Es text-[#494949] md:text-[24px] text-[18px] mb-4">
                 ارتباط با دفتر مرکزی اتورنت
               </p>
               <div class="sm:w-[360px] w-full border border-[#C2C2C2]"></div>
             </div>
 
             <div class="flex flex-col gap-y-8 mb-20">
-              <div class="flex gap-x-2">
+              <div class="flex gap-x-2 md:text-[20px] text-[18px]">
                 <img
                   src="./images/call-us/location.png"
                   alt=""
                   class="block w-6 h-6"
                 />
-                <p class="font-Es text-[20px] text-[#494949]">
+                <p class="font-Es  text-[#494949]">
                   آدرس :
-                  <span class="font-Es text-[20px] text-[#bbb7b7]"
+                  <span class="font-Es  text-[#bbb7b7]"
                     >تهران، میدان آزادی، خیابان آزادی، خیابان شادمان، پلاک
                     23</span
                   >
                 </p>
               </div>
 
-              <div class="flex gap-x-2">
+              <div class="flex gap-x-2 md:text-[20px] text-[18px]">
                 <img src="./images/call-us/call.svg" alt="" />
-                <p class="font-Es text-[20px] text-[#494949]">
+                <p class="font-Es  text-[#494949]">
                   شماره تماس :
-                  <span class="font-Es text-[20px] text-[#bbb7b7]"
+                  <span class="font-Es text-[#bbb7b7]"
                     >02166552589
                   </span>
                 </p>
               </div>
 
-              <div class="flex gap-x-2">
+              <div class="flex gap-x-2 md:text-[20px] text-[18px]">
                 <img src="./images/call-us/sms.png" alt="" />
-                <p class="font-Es text-[20px] text-[#494949]">
+                <p class="font-Es  text-[#494949]">
                   ایمیل :
-                  <span class="font-Es text-[20px] text-[#bbb7b7]">
+                  <span class="font-Es text-[#bbb7b7]">
                     info@AutoRent.com
                   </span>
                 </p>
@@ -275,10 +275,10 @@
 
       <!-- #region send-message-->
       <div class="w-full lg:px-[108px] px-6">
-        <div class="md:max-w-[1224px] bg-white rounded-2xl px-[25px] py-10 flex md:flex-row flex-col gap-x-5 items-center gap-y-5">
-         <div  class="w-1/2">
+        <div class="md:max-w-[1224px] bg-white rounded-2xl px-[25px] py-10 flex md:flex-row flex-col gap-x-5 items-center gap-y-5 ">
+         <div  class="md:w-1/2 w-full">
         <div class="mb-10 ">
-            <p class="font-Es text-[#494949] text-[24px] mb-4">
+            <p class="font-Es text-[#494949] md:text-[24px] text-[18px] mb-4">
               ارسال پیام شما به مجموعه اتورنت
             </p>
             <div class="sm:w-[340px] w-full border border-[#C2C2C2]"></div>
@@ -297,7 +297,7 @@
                 id="full-name"
                 name="full-name"
                 placeholder="نام شما"
-                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400"
+                class="block w-[90%] px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400"
                 value=""
               />
             </div>
@@ -315,7 +315,7 @@
                 id="emaim"
                 name="email"
                 placeholder="Zahra@gmail.com"
-                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400 pr-10"
+                class="block w-[90%] px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400 pr-10"
                 value=""
               />
 
@@ -351,14 +351,14 @@
                 id="phone-number"
                 name="phone-number"
                 placeholder="شماره شما"
-                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400"
+                class="block w-[90%] px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400"
                 value=""
               />
             </div>
 
           </form>
          </div>
-           <div class="w-1/2">
+           <div class="md:w-1/2 w-full">
             <div class="relative font-Es">
               <textarea
                 id="message"
@@ -499,5 +499,11 @@
       <!-- #endregion footer-->
     </div>
     <!-- #endregion wrapper-->
+
+     <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
+
   </body>
 </html>
