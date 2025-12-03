@@ -11,8 +11,10 @@
     <!-- #region wrapper-->
     <div class="wrapper w-full max-w-[1440px] mx-auto">
       <!-- #region header-menu-->
-      <div
-        class="w-full lg:max-w-[1224px] lg:h-24 h-20 rounded-b-2xl mx-auto bg-white lg:px-8 px-3 box-border flex justify-between lg:gap-x-8 gap-x-6 items-center relative"
+       
+    <div class="w-full lg:px-[108px] px-6">
+        <div
+        class="w-full  lg:max-w-[1224px] lg:h-24 h-20 rounded-b-2xl mx-auto bg-white lg:px-8 px-3 box-border flex justify-between lg:gap-x-8 gap-x-6 items-center relative"
       >
         <!--mobile-menu-->
         <div x-data="{showSidenav:false}" class="md:hidden">
@@ -132,8 +134,8 @@
           /></a>
         </div>
         <!-- desktop-menu-->
-        <div class="menu lg:w-[507px] w-[450px] h-7 md:block hidden">
-          <nav class="w-full h-full flex justify-center gap-x-10">
+        <div class="menu lg:w-[507px] w-fit h-7 md:block hidden">
+          <nav class="w-full h-full flex justify-center md:gap-x-6 ">
             <div>
               <a
                 href="#"
@@ -177,7 +179,7 @@
             />
           </nav>
         </div>
-        <div class="login md:flex gap-x-2 items-center hidden">
+        <div class="md:flex gap-x-2 items-center hidden">
           <img
             src="./images/account/user.png"
             alt=""
@@ -186,12 +188,15 @@
           <p class="font-Es text-[14px]">اولدوز بهاور</p>
         </div>
       </div>
+    </div>      
       <!-- #endregion header-menu-->
 
       <!-- #region account-information-->
-      <div class="w-full md:px-[108px] px-6 py-14">
-        <div class="md:max-w-[1224px] flex gap-x-6">
-          <div class="flex flex-col gap-y-5 w-fit">
+      <div class="w-full lg:px-[108px] px-6 py-14">
+        <div
+          class="md:max-w-[1224px] flex sm:flex-row flex-col gap-x-6 gap-y-5"
+        >
+          <div class="flex flex-col gap-y-5 sm:w-fit w-full sm:mx-0 mx-auto">
             <div class="flex gap-x-4 bg-white rounded-2xl p-3.5 items-center">
               <img
                 src="./images/account/user.png"
@@ -205,7 +210,7 @@
               <img src="./images/account/edit.png" alt="" class="w-5 h-5" />
             </div>
 
-            <div class="rounded-2xl px-6 bg-white w-fit">
+            <div class="rounded-2xl px-6 bg-white sm:w-fit w-full">
               <div>
                 <a
                   href="#"
@@ -213,7 +218,11 @@
                 >
                   <img src="./images/account/empty-wallet.png" alt="" />
                   <p class="w-[184px] text-[13px] font-Es">کیف پول</p>
-                  <img src="./images/account/Arrow-left.png" alt="" />
+                  <img
+                    src="./images/account/Arrow-left.png"
+                    alt=""
+                    class="md:mr-0 mr-auto"
+                  />
                 </a>
 
                 <a
@@ -222,7 +231,11 @@
                 >
                   <img src="./images/account/reserve.png" alt="" />
                   <p class="w-[184px] text-[13px] font-Es">رزروهای من</p>
-                  <img src="./images/account/Arrow-left.png" alt="" />
+                  <img
+                    src="./images/account/Arrow-left.png"
+                    alt=""
+                    class="md:mr-0 mr-auto"
+                  />
                 </a>
                 <a
                   href="#"
@@ -230,7 +243,11 @@
                 >
                   <img src="./images/account/location.png" alt="" />
                   <p class="w-[184px] text-[13px] font-Es">آدرس‌های من</p>
-                  <img src="./images/account/Arrow-left.png" alt="" />
+                  <img
+                    src="./images/account/Arrow-left.png"
+                    alt=""
+                    class="md:mr-0 mr-auto"
+                  />
                 </a>
                 <a
                   href="#"
@@ -238,7 +255,11 @@
                 >
                   <img src="./images/account/card-pos.png" alt="" />
                   <p class="w-[184px] text-[13px] font-Es">پرداخت‌های من</p>
-                  <img src="./images/account/Arrow-left.png" alt="" />
+                  <img
+                    src="./images/account/Arrow-left.png"
+                    alt=""
+                    class="md:mr-0 mr-auto"
+                  />
                 </a>
                 <a
                   href="#"
@@ -246,7 +267,11 @@
                 >
                   <img src="./images/account/Comment-outline.png" alt="" />
                   <p class="w-[184px] text-[13px] font-Es">نظرات من</p>
-                  <img src="./images/account/Arrow-left.png" alt="" />
+                  <img
+                    src="./images/account/Arrow-left.png"
+                    alt=""
+                    class="md:mr-0 mr-auto"
+                  />
                 </a>
                 <a
                   href="#"
@@ -254,7 +279,11 @@
                 >
                   <img src="./images/account/logout.png" alt="" />
                   <p class="w-[184px] text-[13px] font-Es">خروج</p>
-                  <img src="./images/account/Arrow-left.png" alt="" />
+                  <img
+                    src="./images/account/Arrow-left.png"
+                    alt=""
+                    class="md:mr-0 mr-auto"
+                  />
                 </a>
               </div>
             </div>
@@ -262,37 +291,148 @@
 
           <div class="w-full px-3 py-[33px] rounded-2xl bg-white">
             <div class="pb-4 border-b border-[#F3F3F3] w-full">
-                <p class="font-Es text-[16px]">اطلاعات حساب کاربری</p>
+              <p class="font-Es text-[16px]">اطلاعات حساب کاربری</p>
             </div>
 
-            <div class="w-full flex flex-col gap-y-[46px]" >
-                <div class="py-5 box-border w-full border-b border-[#F3F3F3] flex gap-x-6">
-                    <div class="flex items-center w-full justify-between px-6 box-border">
-                        <div>
-                            <div class="flex gap-x-2">
-                                <p class="font-Es text-[#5E5E5E] text-[13px]">نام و نام‌خانوادگی</p>
-                                <img src="./images/account/tick-circle.png" alt="">
-                            </div>
-                             <p class="text-[15px] text-[#3535350] font-Es">اولدوز بهاور</p>
-                        </div>
-                        <img src="./images/account/edit-2.png" alt="">
-
+            <div class="w-full flex flex-col">
+              <div
+                class="py-5 box-border w-full border-b border-[#F3F3F3] flex lg:flex-row flex-col gap-y-5 gap-x-6"
+              >
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="flex gap-x-2 mb-2 items-center">
+                      <p class="font-Es text-[#5E5E5E] text-[13px] mb-2">
+                        نام و نام‌خانوادگی
+                      </p>
+                      <img src="./images/account/tick-circle.png" alt="" />
                     </div>
-                     <div class="flex items-center w-full justify-between px-6 box-border">
-                        <div>
-                            <div class="flex gap-x-2">
-                                <p class="font-Es text-[#5E5E5E] text-[13px]">نام و نام‌خانوادگی</p>
-                                <img src="./images/account/tick-circle.png" alt="">
-                            </div>
-                             <p class="text-[15px] text-[#3535350] font-Es">اولدوز بهاور</p>
-                        </div>
-                        <img src="./images/account/edit-2.png" alt="">
-
-                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">
+                      اولدوز بهاور
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
                 </div>
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="flex gap-x-2 mb-2 items-center">
+                      <p class="font-Es text-[#5E5E5E] text-[13px] mb-2">
+                        کدملی
+                      </p>
+                      <img src="./images/account/tick-circle.png" alt="" />
+                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">
+                      ۰۰۳۴۸۷۹۴۷۲
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+              </div>
 
-                
+              <div
+                class="py-5 box-border w-full border-b border-[#F3F3F3] flex lg:flex-row flex-col gap-y-5 gap-x-6"
+              >
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="flex gap-x-2 mb-2 items-center">
+                      <p class="font-Es text-[#5E5E5E] text-[13px]">
+                        شماره موبایل
+                      </p>
+                         <img src="./images/account/close-circle.png" alt="" />
+                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">
+                      09123456789
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="mb-2">
+                      <p class="font-Es text-[#5E5E5E] text-[13px]">ایمیل</p>
+                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">
+                      autorent@gmail.com
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+              </div>
 
+              <div
+                class="py-5 box-border w-full border-b border-[#F3F3F3] flex lg:flex-row flex-col gap-y-5 gap-x-6"
+              >
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="mb-2">
+                      <p class="font-Es text-[#5E5E5E] text-[13px] mb-2">
+                        رمز عبور
+                      </p>
+                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">********</p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="flex gap-x-2 mb-2 items-center">
+                      <p class="font-Es text-[#5E5E5E] text-[13px] mb-2">
+                        روش بازگرداندن پول من
+                      </p>
+                      <img src="./images/account/tick-circle.png" alt="" />
+                    </div>
+                    <p class="sm:text-[15px] text-[12px] text-[#3535350] font-Es">
+                      IR۲۷۶۹۵۷۳۸۶۹۸۳۷۶۸۲۷۶۸۴ - شماره شبا
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+              </div>
+
+              <div
+                class="py-5 box-border w-full border-b border-[#F3F3F3] flex lg:flex-row flex-col gap-y-5 gap-x-6"
+              >
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="flex gap-x-2 mb-2 items-center">
+                      <p class="font-Es text-[#5E5E5E] text-[13px] mb-2">
+                        تاریخ تولد
+                      </p>
+                      <img src="./images/account/tick-circle.png" alt="" />
+                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">
+                      ۱۳۵۹/۱۱/۱۱
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+                <div
+                  class="flex items-center w-full justify-between px-6 box-border"
+                >
+                  <div>
+                    <div class="mb-2">
+                      <p class="font-Es text-[#5E5E5E] text-[13px] mb-2">شغل</p>
+                    </div>
+                    <p class="text-[15px] text-[#3535350] font-Es">
+                      ----------
+                    </p>
+                  </div>
+                  <img src="./images/account/edit-2.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
