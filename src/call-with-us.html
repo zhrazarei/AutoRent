@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call</title>
+    <link
+      rel="shortcut icon"
+      href="./src/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body class="bg-[#F3F3F3]">
+    <!-- #region wrapper-->
+
+    <div class="wrapper w-full max-w-[1440px] mx-auto">
+      <!-- #region banner-header-->
+      <div
+        class="bannerHeader w-full h-[400px] bg-[url(/src/images/car-banner.jpg)] bg-cover bg-center"
+      >
+        <div class="w-full h-full bg-black/50 relative">
+          <!-- #region header-menu-->
+          <div
+            class="w-full lg:max-w-[1224px] lg:h-24 h-20 rounded-b-2xl mx-auto bg-white lg:px-8 px-3 box-border flex justify-between lg:gap-x-8 gap-x-6 items-center relative"
+          >
+            <!--mobile-menu-->
+            <div x-data="{showSidenav:false}" class="md:hidden">
+              <button
+                @click="showSidenav=true"
+                class="absolute top-5 right-3 text-slate-950 rounded-full"
+              >
+                <svg
+                  width="45px"
+                  height="45px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+                      fill="#194bf0"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+
+              <nav
+                x-show="showSidenav"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="scale-y-0 origin-top"
+                x-transition:enter-end="scale-y-100 origin-top"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="scale-y-100 origin-top"
+                x-transition:leave-end="scale-y-0 origin-top"
+                class="absolute top-12 right-0 w-60 bg-amber-500 text-white rounded-md shadow-md origin-top z-3"
+              >
+                <button
+                  @click="showSidenav=false"
+                  class="mb-6 p-4 hover:text-gray-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+
+                <ul class="text-[12px] text-center">
+                  <li>
+                    <a
+                      href="#"
+                      class="font-Es block transition duration-400 w-full h-10 pt-2 hover:bg-[#153fc6]"
+                      ><p class="">رزرو خودرو</p></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-Es block transition duration-400 hover:bg-[#153fc6] w-full h-10 pt-2"
+                      >خدمات ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-Es block transition duration-400 hover:bg-[#153fc6] w-full h-10 pt-2"
+                      >بلاگ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./about-us.html"
+                      class="font-Es block transition duration-400 hover:bg-[#153fc6] w-full h-10 pt-2"
+                      >درباره ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./call-with-us.html"
+                      class="font-Es block transition duration-400 hover:bg-[#153fc6] w-full h-10 pt-2"
+                      >تماس با ما</a
+                    >
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="font-Es block transition duration-400 hover:bg-[#153fc6] w-full h-10 pt-2"
+                      >ورود/ثبت‌نام</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="logo max-w-[152px] max-h-[60px] absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0"
+            >
+              <a href="../index.html"
+                ><img
+                  src="./images/Logo.png"
+                  alt=""
+                  class="max-w-[152px] max-h-[60px]"
+              /></a>
+            </div>
+            <!-- desktop-menu-->
+            <div class="menu lg:w-[507px] w-[450px] h-7 md:block hidden">
+              <nav class="w-full h-full flex justify-center gap-x-10">
+                <div>
+                  <a
+                    href="#"
+                    class="font-Es text-[16px] text-[#353535] whitespace-nowrap"
+                    >رزرو خودرو</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="font-Es text-[16px] text-[#353535] whitespace-nowrap"
+                    >خدمات ما</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="font-Es text-[16px] text-[#353535] whitespace-nowrap"
+                    >بلاگ</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="./about-us.html"
+                    class="font-Es text-[16px] text-[#353535] whitespace-nowrap"
+                    >درباره ما</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="./call-with-us.html"
+                    class="font-Es text-[16px] text-[#353535] whitespace-nowrap"
+                    >تماس با ما</a
+                  >
+                </div>
+
+                <img
+                  class="block w-6 h-6"
+                  src="./images/search-outline.png"
+                  alt=""
+                />
+              </nav>
+            </div>
+            <div class="login md:block hidden">
+              <a
+                href="#"
+                class="btn btn-primary btn-sm w-fit font-Es md:text-[14px] whitespace-nowrap bg-[#194BF0] h-10 rounded-lg font-normal"
+                >ورود / ثبت‌نام</a
+              >
+            </div>
+          </div>
+          <!-- #endregion header-menu-->
+
+          <div
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[35%]"
+          >
+            <h1 class="md:text-[32px] font-Es text-[#FDB713] text-[28px]">
+              تماس با ما
+            </h1>
+            <div
+              class="flex justify-center items-center text-white/90 font-Es md:text-[13px] text-[11px] gap-x-1.5"
+            >
+              <p>اتورنت</p>
+              <img src="./images/arrow-left.png" alt="" />
+              <p>تماس با ما</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion banner-header-->
+      <!--#region office-address-->
+      <div class="w-full lg:px-[108px] px-6 py-14">
+        <div
+          class="md:max-w-[1224px] bg-white rounded-2xl flex md:flex-row flex-col px-[25px] py-10 justify-between"
+        >
+          <div>
+            <div class="mb-10">
+              <p class="font-Es text-[#494949] text-[24px] mb-4">
+                ارتباط با دفتر مرکزی اتورنت
+              </p>
+              <div class="sm:w-[360px] w-full border border-[#C2C2C2]"></div>
+            </div>
+
+            <div class="flex flex-col gap-y-8 mb-20">
+              <div class="flex gap-x-2">
+                <img
+                  src="./images/call-us/location.png"
+                  alt=""
+                  class="block w-6 h-6"
+                />
+                <p class="font-Es text-[20px] text-[#494949]">
+                  آدرس :
+                  <span class="font-Es text-[20px] text-[#bbb7b7]"
+                    >تهران، میدان آزادی، خیابان آزادی، خیابان شادمان، پلاک
+                    23</span
+                  >
+                </p>
+              </div>
+
+              <div class="flex gap-x-2">
+                <img src="./images/call-us/call.svg" alt="" />
+                <p class="font-Es text-[20px] text-[#494949]">
+                  شماره تماس :
+                  <span class="font-Es text-[20px] text-[#bbb7b7]"
+                    >02166552589
+                  </span>
+                </p>
+              </div>
+
+              <div class="flex gap-x-2">
+                <img src="./images/call-us/sms.png" alt="" />
+                <p class="font-Es text-[20px] text-[#494949]">
+                  ایمیل :
+                  <span class="font-Es text-[20px] text-[#bbb7b7]">
+                    info@AutoRent.com
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="./images/call-us/map.png"
+            alt=""
+            class="block w-[330px] h-[330px]"
+          />
+        </div>
+      </div>
+      <!--#endregion office-address-->
+
+      <!-- #region send-message-->
+      <div class="w-full lg:px-[108px] px-6">
+        <div class="md:max-w-[1224px] bg-white rounded-2xl px-[25px] py-10 flex md:flex-row flex-col gap-x-5 items-center gap-y-5">
+         <div  class="w-1/2">
+        <div class="mb-10 ">
+            <p class="font-Es text-[#494949] text-[24px] mb-4">
+              ارسال پیام شما به مجموعه اتورنت
+            </p>
+            <div class="sm:w-[340px] w-full border border-[#C2C2C2]"></div>
+          </div>
+          <form class="space-y-5">
+            <div class="relative font-Es ">
+              <label
+                for="full-name"
+                class="absolute right-3 -top-3 text-[14px] text-[#949494] bg-white px-2 transition-all duration-300"
+              >
+                نام و نام خانوادگی
+              </label>
+
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="نام شما"
+                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400"
+                value=""
+              />
+            </div>
+
+            <div class="relative font-Es">
+              <label
+                for="full-name"
+                class="absolute right-3 -top-3 text-[14px] font-medium text-[#949494] bg-white px-2 transition-all duration-300"
+              >
+                پست الکترونیکی
+              </label>
+
+              <input
+                type="text"
+                id="emaim"
+                name="email"
+                placeholder="Zahra@gmail.com"
+                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400 pr-10"
+                value=""
+              />
+
+              <div
+                class="absolute inset-y-0 right-0 pl-3 flex items-center pointer-events-none"
+              >
+                <svg
+                  class="h-6 w-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.625a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="relative font-Es">
+              <label
+                for="full-name"
+                class="absolute right-3 -top-3 text-[14px] text-[#949494] bg-white px-2 transition-all duration-300"
+              >
+                شماره تماس
+              </label>
+
+              <input
+                type="text"
+                id="phone-number"
+                name="phone-number"
+                placeholder="شماره شما"
+                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-[12px] text-right placeholder-gray-400"
+                value=""
+              />
+            </div>
+
+          </form>
+         </div>
+           <div class="w-1/2">
+            <div class="relative font-Es">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-lg text-right"
+              ></textarea>
+            </div>
+
+            <div class="pt-4">
+              <button
+                type="submit"
+                class="w-full px-6 py-3 border border-transparent text-lg font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out"
+              >
+                ارسال
+              </button>
+            </div>
+           </div>
+           
+        </div>
+      </div>
+      <!-- #endregion send-message-->
+
+       <!-- #region footer-->
+      <div class="w-full lg:px-[110px] px-6 py-10">
+        <div
+          class="md:max-w-[1220px] h-fit w-full bg-[url(/src/images/footer.png)] rounded-2xl"
+        >
+          <div
+            class="w-full h-full bg-black/70 relative rounded-2xl md:p-[50px] p-5 box-border"
+          >
+            <!-- information-->
+
+            <div
+              class="md:max-w-[1120px] w-full mx-auto p-4 box-border border border-[#868686] rounded-2xl flex flex-col md:flex-row md:justify-between md:items-center md:gap-y-0 gap-y-5"
+            >
+              <!-- call-->
+              <div class="flex gap-x-4 md:[38px] box-border">
+                <img src="./images/call.png" alt="" />
+                <div
+                  class="flex flex-col gap-y-2 font-Es md:text-[14px] text-[12px] md:text-center text-white"
+                >
+                  <p>ارتباط با ما</p>
+                  <p>0912-21326545</p>
+                </div>
+              </div>
+
+              <div
+                class="w-full h-px bg-[#6e6d6d] md:w-0 md:h-8 md:flex md:border md:border-[#6e6d6d]"
+              ></div>
+
+              <!-- email-->
+              <div class="flex gap-x-4">
+                <img src="./images/email.png" alt="" />
+                <div
+                  class="flex flex-col gap-y-2 font-Es md:[14px] text-[12px] md:text-center text-white"
+                >
+                  <p>ایمیل</p>
+                  <p>autorent@info.com</p>
+                </div>
+              </div>
+
+              <div
+                class="w-full h-px bg-[#6e6d6d] md:w-0 md:h-8 md:flex md:border md:border-[#6e6d6d]"
+              ></div>
+
+              <!-- address-->
+
+              <div class="flex gap-x-4">
+                <img src="./images/address.png" alt="" />
+                <div
+                  class="flex flex-col gap-y-2 font-Es md:[14px] text-[12px] md:text-center text-white"
+                >
+                  <p>آدرس</p>
+                  <p>تهران- خ شادمان</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- information-->
+
+            <!-- Guide bar-->
+            <div
+              class="md:px-[68px] box-border md:max-w-[1120px] w-full my-4 flex lg:flex-row flex-col"
+            >
+              <div
+                class="flex lg:flex-row flex-col justify-between lg:w-[65%] w-full"
+              >
+                <div
+                  class="lg:w-[70%] w-full lg:pl-8 box-border lg:block md:flex md:flex-row lg:gap-x-0 gap-x-10"
+                >
+                  <img src="./images/logo-footer.png" alt="" class="mb-4" />
+                  <p class="font-Es text-[14px] leading-[180%] text-white">
+                    اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن
+                    بزرگترین ناوگان خودرویی متشکل از انواع خودروهای صفر کیلومتر،
+                    اقتصادی تا تجاری در سراسر کشور ایران آماده خدمت‌رسانی به
+                    مشتریان است.
+                  </p>
+                </div>
+                <div
+                  class="flex lg:flex-col lg:gap-y-5 lg:justify-normal justify-between sm:gap-x-0 gap-x-2.5 flex-row font-Es md:text-[14px] text-[12px] text-white lg:w-[30%] lg:py-0 py-5"
+                >
+                  <a href="">دسترسی آسان</a>
+                  <a href="">سوالات متداول</a>
+                  <a href="">تماس با ما</a>
+                  <a href="">درباره ما</a>
+                </div>
+              </div>
+              <div class="lg:w-[35%] sm:w-[70%] w-full lg:py-11">
+                <p
+                  class="font-Es text-[16px] leading-[100%] text-right mb-5 text-[#FFFFFF]"
+                >
+                  خبرنامه
+                </p>
+                <form>
+                  <div class="relative">
+                    <input
+                      type="email"
+                      id="email"
+                      class="block w-full h-10 rounded-md p-3 border border-[#868686] text-heading text-sm shadow-xs text-[#C2C2C2] font-Es"
+                      placeholder="ایمیل خود را وارد کنید"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-ghost absolute end-1 bottom-1 text-[#212121] font-Es text-[14px] leading-[180%] bg-[#FDB713] rounded-md w-[66px] h-8 font-semibold"
+                    >
+                      ارسال
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Guide bar-->
+          </div>
+        </div>
+      </div>
+      <!-- #endregion footer-->
+    </div>
+    <!-- #endregion wrapper-->
+  </body>
+</html>
